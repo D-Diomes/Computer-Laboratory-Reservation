@@ -9,4 +9,3 @@ reservations = [
         "date": "2026-11-20",
         "time_slot": "09:00-11:00",
     }
-]
