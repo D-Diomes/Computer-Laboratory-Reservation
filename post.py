@@ -2,7 +2,7 @@ import random
 from flask import Blueprint, Flask, jsonify, request
 from reservation import VALID_LABS, reservations
 
-post_bp = Blueprint("post_bp", _name_)
+post_bp = Blueprint("post_bp", __name__)
 
 REQUIRED_FIELDS = ("lab", "pc_number", "student_name", "date", "time_slot")
 
@@ -66,7 +66,7 @@ def create_reservation():
     }), 201
 
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     reservations.append({
         "reservation_id": "RES-62840",
         "lab": "Network-Lab",
@@ -76,6 +76,6 @@ if _name_ == "_main_":
         "time_slot": "08:00-10:00",
     })
 
-    local_app = Flask(_name_)
+    local_app = Flask(__name__)
     local_app.register_blueprint(post_bp)
     local_app.run(debug=True, port=5000)
