@@ -13,8 +13,6 @@ def cancel_reservation(reservation_id):
 
     return jsonify({"error": "Reservation not found"}), 404
 
-
-# Erik's branch demo runner
 if __name__ == "__main__":
     reservations.extend([
         {
