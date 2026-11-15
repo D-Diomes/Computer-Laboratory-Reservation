@@ -26,6 +26,21 @@ def get_all_reservations():
     }), 200
 
 
+def find_reservation(res_id):
+    for record in reservations:
+        if record["reservation_id"] == res_id:
+            return record
+    return None
+
+
+@get_bp.route("/reservations/<string:reservation_id>", methods=["GET"])
+def get_single_reservation(reservation_id):
+    record = find_reservation(reservation_id)
+    if record is None:
+        return jsonify({"error": "Reservation not found"}), 404
+    return jsonify(record), 200
+
+
 if __name__ == "__main__":
     reservations.append({
         "reservation_id": "RES-30914",
