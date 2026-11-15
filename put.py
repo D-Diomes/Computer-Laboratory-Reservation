@@ -3,8 +3,6 @@ from reservation import reservations, VALID_LABS
 
 put_bp = Blueprint("put_bp", __name__)
 
-
-# Assigned to: (your name here) (Branch: feat/update-reservation)
 @put_bp.route("/reservations/<string:reservation_id>", methods=["PUT"])
 def update_reservation(reservation_id):
     target = None
