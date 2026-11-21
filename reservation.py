@@ -1,4 +1,4 @@
-VALID_LABS = ["Advance-Lab", "Basic-Lab", "Network-Lab"]
+VALID_LABS = ["Advance-Lab", "Basic-Lab", "Cisco-Lab"]
 
 reservations = [
     {
