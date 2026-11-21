@@ -33,7 +33,7 @@ def update_reservation(reservation_id):
 
     for existing in reservations:
         if existing is target:
-            continue  # a reservation must not conflict with itself
+            continue  
         if (
             existing["lab"] == data["lab"]
             and existing["pc_number"] == data["pc_number"]
