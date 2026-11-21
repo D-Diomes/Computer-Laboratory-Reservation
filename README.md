@@ -5,6 +5,6 @@
 4. pip install -r requirements.txt
 
 ## Available Labs
-Advance-Lab
-Basic-Lab
-Cisco-Lab
+1. Advance-Lab
+2. Basic-Lab
+3. Cisco-Lab
